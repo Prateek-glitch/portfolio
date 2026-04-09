@@ -110,7 +110,7 @@ export default function Hero() {
       >
         <div className="w-64 h-80 md:w-72 md:h-96 bg-black rounded-2xl border border-[#c94b4b]/20 shadow-[0_0_60px_rgba(201,75,75,0.1)] overflow-hidden flex items-center justify-center relative transition-all duration-500 group-hover:border-[#c94b4b]/40">
           <img 
-            src="/potrait.jpeg" 
+            src="/p.jpeg" 
             alt="Prateek Kumar" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100"
           />
