@@ -4,11 +4,17 @@ import BackgroundParticles from "@/components/BackgroundParticles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-//metadata
+// Metadata Configuration
 export const metadata = {
   title: "Prateek Kumar | Software Engineer & Cybersecurity Enthusiast",
   description: "Portfolio of Prateek Kumar, an MCA student at RVCE specializing in Full-Stack Development and Cybersecurity.",
   keywords: ["Prateek Kumar", "Software Engineer", "Full Stack Developer", "Cybersecurity", "RVCE", "R.V. College of Engineering", "MCA", "Portfolio"],
+  
+  // This is the part we just added for Google Search Console
+  verification: {
+    google: "7_CxPOB0O1OhKjjJQ0twY1HfghtlHzVBsa10JDGqmHU",
+  },
+
   openGraph: {
     title: "Prateek Kumar | Software Engineer | Frontend | Full Stack Developer",
     description: "Building robust applications and secure systems.",
@@ -16,7 +22,7 @@ export const metadata = {
     siteName: "Prateek Kumar Portfolio",
     images: [
       {
-        url: "/p.jpeg", // This shows up when you share your link on LinkedIn
+        url: "/p.jpeg", // Ensure p.jpeg exists in your /public folder
         width: 1200,
         height: 630,
       },
