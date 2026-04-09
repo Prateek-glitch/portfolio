@@ -4,6 +4,28 @@ import BackgroundParticles from "@/components/BackgroundParticles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+//metadata
+export const metadata = {
+  title: "Prateek Kumar | Software Engineer & Cybersecurity Enthusiast",
+  description: "Portfolio of Prateek Kumar, an MCA student at RVCE specializing in Full-Stack Development and Cybersecurity.",
+  keywords: ["Prateek Kumar", "Software Engineer", "Full Stack Developer", "Cybersecurity", "RVCE", "R.V. College of Engineering", "MCA", "Portfolio"],
+  openGraph: {
+    title: "Prateek Kumar | Software Engineer | Frontend | Full Stack Developer",
+    description: "Building robust applications and secure systems.",
+    url: "https://prateek-portfolio-kappa.vercel.app/",
+    siteName: "Prateek Kumar Portfolio",
+    images: [
+      {
+        url: "/p.jpeg", // This shows up when you share your link on LinkedIn
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 // 1. Configure Inter with the '900' weight for that heavy Caesar look
 const inter = Inter({
   subsets: ["latin"],
