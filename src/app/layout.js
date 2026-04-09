@@ -4,17 +4,18 @@ import BackgroundParticles from "@/components/BackgroundParticles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Metadata Configuration
+// --- MERGED METADATA CONFIGURATION (Only one export allowed!) ---
 export const metadata = {
   title: "Prateek Kumar | Software Engineer & Cybersecurity Enthusiast",
   description: "Portfolio of Prateek Kumar, an MCA student at RVCE specializing in Full-Stack Development and Cybersecurity.",
   keywords: ["Prateek Kumar", "Software Engineer", "Full Stack Developer", "Cybersecurity", "RVCE", "R.V. College of Engineering", "MCA", "Portfolio"],
   
-  // This is the part we just added for Google Search Console
+  // Google Search Console Verification
   verification: {
     google: "7_CxPOB0O1OhKjjJQ0twY1HfghtlHzVBsa10JDGqmHU",
   },
 
+  // Social Media / OpenGraph Preview
   openGraph: {
     title: "Prateek Kumar | Software Engineer | Frontend | Full Stack Developer",
     description: "Building robust applications and secure systems.",
@@ -22,7 +23,7 @@ export const metadata = {
     siteName: "Prateek Kumar Portfolio",
     images: [
       {
-        url: "/p.jpeg", // Ensure p.jpeg exists in your /public folder
+        url: "/p.jpeg", 
         width: 1200,
         height: 630,
       },
@@ -30,9 +31,22 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+
+  // Favicon and App Icons Configuration
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest", 
 };
 
-// 1. Configure Inter with the '900' weight for that heavy Caesar look
+// --- FONT INITIALIZATION ---
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700", "900"], 
@@ -44,24 +58,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-export const metadata = {
-  title: "Prateek Kumar | Software Engineer",
-  description: "Portfolio of Prateek Kumar",
-  // 2. Map the favicon files from your public/favicon folder
-  icons: {
-    icon: [
-      { url: "/favicon/favicon.ico" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: [
-      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
-  // If you have a site manifest, link it here
-  manifest: "/favicon/site.webmanifest", 
-};
-
+// --- ROOT LAYOUT COMPONENT ---
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${jetbrainsMono.variable}`}>
