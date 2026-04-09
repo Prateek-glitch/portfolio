@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Connect Tailwind v4 to the fonts we set up in layout.jsx */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Base styles to ensure smooth scrolling and no layout shifts */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply antialiased overflow-x-hidden;
+    /* Remove the hardcoded Arial font so layout.jsx font works */
+    overflow-x: hidden;
+    font-family: var(--font-inter), ui-sans-serif, system-ui;
+  }
+
+  /* Ensure Framer Motion sections have a minimum height so they can be "seen" by the phone's sensor */
+  section {
+    min-height: 10vh;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hide scrollbar for cleaner look if desired */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c94b4b20;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c94b4b40;
 }
